@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect With Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #8e44ad; 
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Background animation */
+    .background-animation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #8e44ad, #3498db, #2ecc71, #f39c12);
+      background-size: 600% 600%;
+      animation: gradientBackground 10s ease infinite;
+      z-index: -1;
+    }
+
+    @keyframes gradientBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Container styling */
+    .container {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      max-width: 650px;
+      width: 100%;
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    /* Heading style */
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      animation: slideIn 1s ease-out;
+    }
+
+    /* Social Media Links container */
+    .social-links {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+      color: #333;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.1);
+      background-color: #3498db;
+      box-shadow: 0 10px 25px rgba(52, 152, 219, 0.3);
+    }
+
+    /* Social icon hover colors */
+    .social-links a:nth-child(1):hover { background-color: #e4405f; } /* Instagram */
+    .social-links a:nth-child(2):hover { background-color: #3b5998; } /* Facebook */
+    .social-links a:nth-child(3):hover { background-color: #0077b5; } /* LinkedIn */
+    .social-links a:nth-child(4):hover { background-color: #0088cc; } /* Telegram */
+
+    /* Additional Links */
+    .additional-links {
+      list-style: none;
+      padding: 0;
+      margin-top: 30px;
+    }
+
+    .additional-links li {
+      margin: 15px 0;
+    }
+
+    .additional-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .additional-links a:hover {
+      color: #3498db;
+      text-decoration: underline;
+    }
+
+    /* Animations for fadeIn and slideIn */
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      0% { transform: translateY(100px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background animation layer -->
+  <div class="background-animation"></div>
+
+  <!-- Main container -->
+  <div class="container">
+    <h1>Connect with Me</h1>
+    
+    <!-- Social Media Links -->
+    <div class="social-links">
+      <a href="https://www.instagram.com/praveen_hallur_learning?igsh=MXd2dTZsajhtM3k4cg==" target="_blank" title="Instagram">📸</a>
+      <a href="https://www.facebook.com/p/Praveen-hallur-learning-100082799914507/" target="_blank" title="Facebook">📘</a>
+      <a href="https://www.linkedin.com/company/praveen-hallur-learning/posts?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3Br7z7m8p0Rrq2TfU2xUUwmA%3D%3D" target="_blank" title="LinkedIn">🔗</a>
+      <a href="https://t.me/praveenhallurlearning" target="_blank" title="Telegram">📱</a>
+    </div>
+
+    <!-- Additional Links -->
+    <ul class="additional-links">
+      <li><a href="mailto:praveenhallur2003@gmail.com">Email Me</a></li>
+      <li><a href="https://praveenhallurlearning.quora.com/" target="_blank">Quora</a></li>
+      <li><a href="https://praveenhallurlearning.blogspot.com/" target="_blank">Blog</a></li>
+      <li><a href="https://github.com/PraveenHallur123" target="_blank">GitHub</a></li>
+      <li><a href="https://praveenportfolio2003.blogspot.com/#" target="_blank">About Me</a></li>
+    </ul>
+  </div>
+
+  <!-- JavaScript to open social links -->
+  <script>
+    const socialLinks = document.querySelectorAll('.social-links a');
+    socialLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        window.open(this.href, '_blank');
+      });
+    });
+  </script>
+
+</body>
+</html>
